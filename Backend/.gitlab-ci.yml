@@ -1,0 +1,15 @@
+# using private server based runner
+stages:
+  - deploy
+
+deploy-job-master:
+  stage: deploy
+  image: docker:latest
+  script:
+    - ls -a
+    - docker ps
+    - docker system prune -a --volumes -f
+    - docker login -u robertkin -p $dockerhub
+    - docker buildx build --progress=plain --force-rm --push -t robertkin/webapp:1 ./CapCon
+  only:
+    - main

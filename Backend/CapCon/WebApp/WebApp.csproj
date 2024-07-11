@@ -1,0 +1,198 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApp-FA1CFB25-0AFC-4963-A697-F885D13550C3</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="4NuGet" Version="1.0.0" />
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0" />
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\App.BLL.DTO\App.BLL.DTO.csproj" />
+      <ProjectReference Include="..\App.BLL\App.BLL.csproj" />
+      <ProjectReference Include="..\App.Contracts.BLL\App.Contracts.BLL.csproj" />
+      <ProjectReference Include="..\App.DAL.EF\App.DAL.EF.csproj" />
+      <ProjectReference Include="..\App.Domain\App.Domain.csproj" />
+      <ProjectReference Include="..\App.DTO\App.DTO.csproj" />
+      <ProjectReference Include="..\Helpers\Helpers.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Home\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Home\Privacy.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppUserRoles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppUserRoles\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppUserRoles\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppUserRoles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppUserRoles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AppUserRoles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AppUserRoles\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AppUserRoles\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AppUserRoles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AppUserRoles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contracts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contracts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contracts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contracts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Contracts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LoanRequests\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LoanRequests\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LoanRequests\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LoanRequests\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LoanRequests\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Loans\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Loans\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Loans\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Loans\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Loans\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_LoginPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transactions\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transactions\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transactions\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transactions\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Transactions\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uploads\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uploads\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uploads\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uploads\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Uploads\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserCompanies\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserCompanies\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserCompanies\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserCompanies\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\UserCompanies\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Companies\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Companies\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Companies\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Companies\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Companies\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CompanyRoles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CompanyRoles\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CompanyRoles\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CompanyRoles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\CompanyRoles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppRoles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppRoles\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppRoles\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppRoles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\AppRoles\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contracts\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contracts\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contracts\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contracts\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Contracts\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Uploads\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Uploads\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Uploads\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Uploads\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Uploads\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\CompanyRoles\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\CompanyRoles\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\CompanyRoles\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\CompanyRoles\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\CompanyRoles\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Home\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Home\Privacy.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Uploads\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Uploads\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Uploads\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Uploads\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Uploads\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\CompanyRoles\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\CompanyRoles\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\CompanyRoles\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\CompanyRoles\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\CompanyRoles\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\AppUserRoles\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\AppUserRoles\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\AppUserRoles\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\AppUserRoles\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\AppUserRoles\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Companies\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Companies\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Companies\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Companies\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Companies\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Contracts\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\LoanRequests\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Transactions\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\UserCompanies\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Admin\Controllers\" />
+      <Folder Include="Areas\Admin\ViewModels\" />
+    </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+
+</Project>

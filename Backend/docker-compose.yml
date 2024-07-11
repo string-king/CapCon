@@ -1,0 +1,31 @@
+services: 
+  sql:
+    image: postgres:16
+    container_name: capcon-sql
+    ports:
+      # external : internal
+      - 5432:5432
+    volumes: 
+      - sql-volume:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+    restart: on-failure
+    logging:
+      options: 
+        max-size: 10m
+        max-file: 3
+  app:
+    build: ./
+    container_name: capcon-app
+    ports:
+      - 8080:8080
+    restart: on-failure
+    environment:
+      ConnectionStrings__DefaultConnection: "Host=capcon-sql;Port=5432;Database=capcon;Username=postgres;Password=postgres"
+    logging:
+      options:
+        max-size: 10m
+        max-file: 3
+    depends_on:
+      - sql
